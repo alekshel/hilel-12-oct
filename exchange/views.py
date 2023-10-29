@@ -1,6 +1,8 @@
 from django.http import JsonResponse
+from django.shortcuts import render
 
 from .models import Rate
+from .forms import RateForm
 
 
 def main_view(request):
@@ -19,3 +21,41 @@ def main_view(request):
         ]
     }
     return JsonResponse(response_data)
+
+
+def calc_view(request):
+    sum_from = 100
+
+    if not request.POST.get("currency_from"):
+        current_from = (
+            Rate.objects.values_list("currency_from", flat=True).distinct().first()
+        )
+    else:
+        current_from = request.POST.get("currency_from")
+    best_rate = Rate.objects.filter(currency_from=current_from).order_by("buy").first()
+
+    if request.method == "POST":
+        form = RateForm(request.POST)
+    else:
+        form = RateForm()
+
+    rates = list()
+    for rate in Rate.objects.filter(currency_from=current_from).all():
+        rates.append(
+            {
+                "provider": rate.provider,
+                "sum_to": float(rate.buy * sum_from),
+            }
+        )
+
+    return render(
+        request,
+        "calc_form.html",
+        {
+            "form": form,
+            "current_from": current_from,
+            "sum_from": sum_from,
+            "sum_to": float(sum_from * best_rate.buy),
+            "rates": rates,
+        },
+    )

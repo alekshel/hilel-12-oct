@@ -6,7 +6,7 @@ from celery.schedules import crontab
 # Set the default Django settings module for the 'celery' program.
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "hilel12.settings")
 
-app = Celery("proj")
+app = Celery("hilel12")
 
 # Using a string here means the worker doesn't have to serialize
 # the configuration object to child processes.
@@ -20,6 +20,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     "add-every-midnight": {
         "task": "exchange.tasks.pull_rate",
-        "schedule": crontab(minute=0, hour=0),
+        "schedule": 60.0,
     },
 }

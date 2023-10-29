@@ -17,6 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from exchange.views import main_view
+from exchange.views import main_view, calc_view
 
-urlpatterns = [path("admin/", admin.site.urls), path("exchange-rates", main_view)]
+urlpatterns = [
+    path("admin/", admin.site.urls),
+    path("exchange-rates", main_view),
+    path("calc", calc_view),
+]

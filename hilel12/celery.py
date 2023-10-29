@@ -20,6 +20,6 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     "add-every-midnight": {
         "task": "exchange.tasks.pull_rate",
-        "schedule": 60.0,
+        "schedule": crontab(minute="0", hour="0"),
     },
 }

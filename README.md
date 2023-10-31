@@ -3,22 +3,32 @@
 pip install -r requirements.txt
 ```
 
-## 2. Run broker RabbitMQ
+## 2. Models migrate
+```
+py manage.py migrate
+or
+python manage.py migrate
+```
+
+
+## 3. Run broker RabbitMQ
 ```
 docker run -d -p 5672:5672 rabbitmq
 ```
 
-## 3. Run worker
+## 4. Run worker
 ```
-celery -A lesson_11_celery worker -l INFO
+celery -A hilel12 worker -l INFO
+or on Windows
+celery -A hilel12 worker -l INFO --pool=solo
 ```
 
-## 4. Run celery beat
+## 5. Run celery beat
 ```
 celery -A hilel12 beat -l INFO --scheduler django_celery_beat.schedulers:DatabaseScheduler
 ```
 
-## 5. Run Django web server
+## 6. Run Django web server
 ```
 py manage.py runserver
 or

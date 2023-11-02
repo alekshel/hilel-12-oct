@@ -48,6 +48,10 @@ def calc_view(request):
             }
         )
 
+    sum_rate = 0
+    if best_rate:
+        sum_rate = float(sum_from * best_rate.buy)
+
     return render(
         request,
         "calc_form.html",
@@ -55,7 +59,7 @@ def calc_view(request):
             "form": form,
             "current_from": current_from,
             "sum_from": sum_from,
-            "sum_to": float(sum_from * best_rate.buy),
+            "sum_to": sum_rate,
             "rates": rates,
         },
     )

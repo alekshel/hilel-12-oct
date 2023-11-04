@@ -1,3 +1,4 @@
+from django.contrib import messages
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -40,10 +41,11 @@ def calc_view(request):
         form = RateForm()
 
     rates = list()
-    for rate in Rate.objects.filter(currency_from=current_from).all():
+    for rate in Rate.objects.filter(currency_from=current_from).order_by("buy").all():
         rates.append(
             {
                 "provider": rate.provider,
+                "rate_buy": float(rate.buy),
                 "sum_to": float(rate.buy * sum_from),
             }
         )
@@ -51,6 +53,17 @@ def calc_view(request):
     sum_rate = 0
     if best_rate:
         sum_rate = float(sum_from * best_rate.buy)
+
+    if rates:
+        messages.success(
+            request,
+            f"Найкращий курс від {rates[0]['provider']} => {rates[0]['rate_buy']} {current_from}",
+        )
+    else:
+        messages.error(
+            request,
+            "У базі не має курсів валют",
+        )
 
     return render(
         request,

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <title>Калькурятор курсів валют</title>
+        {% load bootstrap5 %}
+        {% bootstrap_css %}
+        {% bootstrap_javascript %}
+    </head>
+    <body>
+        {% bootstrap_messages %}
+        <div class="container">
+            <div class="col-6 mx-auto mt-4">
+                <h1 class="mb-4">Розрахунок курсів валют</h1>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

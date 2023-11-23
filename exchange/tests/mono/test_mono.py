@@ -9,7 +9,7 @@ from exchange.currency_provider import MonoProvider, SellBuy
 
 def get_json():
     current_directory = Path(__file__).parent
-    with open(current_directory / 'rates.json', 'r') as file:
+    with open(current_directory / "rates.json", "r") as file:
         data = json.load(file)
     return data
 

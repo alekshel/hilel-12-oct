@@ -1,0 +1,26 @@
+[
+  {
+    "model": "exchange.Rate",
+    "pk": 1,
+    "fields": {
+      "currency_from": "USD",
+      "currency_to": "UAH",
+      "sell": 30,
+      "buy": 34,
+      "provider": "mono",
+      "date": "2021-01-01"
+    }
+  },
+  {
+    "model": "exchange.Rate",
+    "pk": 2,
+    "fields": {
+      "currency_from": "USD",
+      "currency_to": "UAH",
+      "sell": 36.6,
+      "buy": 41,
+      "provider": "mono",
+      "date": "2022-04-01"
+    }
+  }
+]

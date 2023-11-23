@@ -1,0 +1,202 @@
+{
+  "data": {
+    "UAH": {
+      "midbank": {
+        "buy": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "sparkline": "1,1,1,1,1,1,1",
+          "gcharts": "/data/currency/retail/uah.rates.full.json",
+          "strend": 0
+        },
+        "sell": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "sparkline": "1,1,1,1,1,1,1",
+          "gcharts": "/data/currency/retail/uah.rates.full.json",
+          "strend": 0
+        }
+      },
+      "interbank": {
+        "buy": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "gcharts": "/data/currency/ib/uah.ib.stock.json"
+        },
+        "sell": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "gcharts": "/data/currency/ib/uah.ib.stock.json"
+        }
+      },
+      "nbu": {
+        "buy": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "sparkline": "1,1,1,1,1,1,1",
+          "gcharts": "/data/currency/nbu/nbu.uah.stock.json",
+          "strend": 0
+        },
+        "sell": {
+          "val": "1.00",
+          "trend": "0.0000",
+          "timestamp": null,
+          "sparkline": "1,1,1,1,1,1,1",
+          "gcharts": "/data/currency/nbu/nbu.uah.stock.json",
+          "strend": 0
+        }
+      },
+      "auction": {
+        "buy": {
+          "val": "1.00",
+          "timestamp": null,
+          "trend": "-",
+          "gcharts": "/data/currency/auction/uah.1000.median.daily.format.json"
+        },
+        "sell": {
+          "val": "1.00",
+          "timestamp": null,
+          "trend": "-",
+          "gcharts": "/data/currency/auction/uah.1000.median.daily.format.json"
+        }
+      }
+    },
+    "USD": {
+      "midbank": {
+        "buy": {
+          "val": "37.3000",
+          "trend": "0.0000",
+          "timestamp": "2023-11-23 09:05:01",
+          "sparkline": "37.625,37.6,37.6,37.6,37.575,37.55,37.55",
+          "gcharts": "/data/currency/retail/usd.rates.full.json",
+          "strend": -0.075000000000003
+        },
+        "sell": {
+          "val": "37.8000",
+          "trend": "0.0000",
+          "timestamp": "2023-11-23 09:05:01",
+          "sparkline": "37.625,37.6,37.6,37.6,37.575,37.55,37.55",
+          "gcharts": "/data/currency/retail/usd.rates.full.json",
+          "strend": -0.075000000000003
+        }
+      },
+      "interbank": {
+        "buy": {
+          "val": "36.0550",
+          "trend": "-0.0450",
+          "timestamp": "2023-11-22 17:31:02",
+          "gcharts": "/data/currency/ib/usd.ib.stock.json"
+        },
+        "sell": {
+          "val": "36.0750",
+          "trend": "-0.0450",
+          "timestamp": "2023-11-22 17:31:02",
+          "gcharts": "/data/currency/ib/usd.ib.stock.json"
+        }
+      },
+      "nbu": {
+        "buy": {
+          "val": 36.0675,
+          "trend": 0.0222,
+          "timestamp": "2023-11-23 08:01:54",
+          "sparkline": "36.0675,36.0453,36.0496,36.1394",
+          "gcharts": "/data/currency/nbu/nbu.usd.stock.json",
+          "strend": 0.071899999999999
+        },
+        "sell": {
+          "val": 36.0675,
+          "trend": 0.0222,
+          "timestamp": "2023-11-23 08:01:54",
+          "sparkline": "36.0675,36.0453,36.0496,36.1394",
+          "gcharts": "/data/currency/nbu/nbu.usd.stock.json",
+          "strend": 0.071899999999999
+        }
+      },
+      "auction": {
+        "buy": {
+          "val": 37.65,
+          "timestamp": "2023-11-23 08:00:00",
+          "trend": 0,
+          "gcharts": "/data/currency/auction/usd.1000.median.daily.format.json"
+        },
+        "sell": {
+          "val": 37.75,
+          "timestamp": "2023-11-23 08:00:00",
+          "trend": 0,
+          "gcharts": "/data/currency/auction/usd.1000.median.daily.format.json"
+        }
+      }
+    },
+    "EUR": {
+      "midbank": {
+        "buy": {
+          "val": "40.5000",
+          "trend": "0.1000",
+          "timestamp": "2023-11-23 09:05:02",
+          "sparkline": "40.575,40.575,40.555,40.6,40.7,40.75,40.8",
+          "gcharts": "/data/currency/retail/eur.rates.full.json",
+          "strend": 0.22499999999999
+        },
+        "sell": {
+          "val": "41.1000",
+          "trend": "0.0000",
+          "timestamp": "2023-11-23 09:05:02",
+          "sparkline": "40.575,40.575,40.555,40.6,40.7,40.75,40.8",
+          "gcharts": "/data/currency/retail/eur.rates.full.json",
+          "strend": 0.22499999999999
+        }
+      },
+      "interbank": {
+        "buy": {
+          "val": "39.2062",
+          "trend": "-0.3307",
+          "timestamp": "2023-11-22 17:31:02",
+          "gcharts": "/data/currency/ib/eur.ib.stock.json"
+        },
+        "sell": {
+          "val": "39.2243",
+          "trend": "-0.3307",
+          "timestamp": "2023-11-22 17:31:02",
+          "gcharts": "/data/currency/ib/eur.ib.stock.json"
+        }
+      },
+      "nbu": {
+        "buy": {
+          "val": 39.3352,
+          "trend": -0.1308,
+          "timestamp": "2023-11-23 08:01:54",
+          "sparkline": "39.3352,39.466,39.3986,39.2582",
+          "gcharts": "/data/currency/nbu/nbu.eur.stock.json",
+          "strend": -0.076999999999998
+        },
+        "sell": {
+          "val": 39.3352,
+          "trend": -0.1308,
+          "timestamp": "2023-11-23 08:01:54",
+          "sparkline": "39.3352,39.466,39.3986,39.2582",
+          "gcharts": "/data/currency/nbu/nbu.eur.stock.json",
+          "strend": -0.076999999999998
+        }
+      },
+      "auction": {
+        "buy": {
+          "val": 40.8,
+          "timestamp": "2023-11-23 08:00:00",
+          "trend": 0,
+          "gcharts": "/data/currency/auction/eur.1000.median.daily.format.json"
+        },
+        "sell": {
+          "val": 41,
+          "timestamp": "2023-11-23 08:00:00",
+          "trend": 0,
+          "gcharts": "/data/currency/auction/eur.1000.median.daily.format.json"
+        }
+      }
+    }
+  }
+}
